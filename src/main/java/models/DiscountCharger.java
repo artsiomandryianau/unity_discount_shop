@@ -10,7 +10,7 @@ import static models.parsers.PriceParser.parsePrice;
 
 public class DiscountCharger {
 
-    private Basket basket;
+    private final Basket basket;
 
     public DiscountCharger(Basket basket) {
         this.basket = basket;

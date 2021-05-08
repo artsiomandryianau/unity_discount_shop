@@ -2,7 +2,6 @@ package models.parsers;
 
 import com.google.common.base.Strings;
 import exceptions.DataException;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import static configuration.Configuration.DECIMAL_PLACES;

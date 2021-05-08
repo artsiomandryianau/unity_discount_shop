@@ -30,7 +30,7 @@ class ProductFactoryTest extends Specification {
     @Unroll
     def 'should throw exception when name = #name or price = #price values are not valid'() {
         when:
-        def product = productFactory.createProduct(name, price)
+        productFactory.createProduct(name, price)
 
         then:
         thrown(DataException)

@@ -20,9 +20,9 @@ class PriceParserTest extends Specification {
 
         where:
         price     | expectedPrice
-        "1011.08" | 1011.08
-        "1022"    | 1022.0
-        "1000.01" | 1000.01
+        "1011.08" | 1011.08d
+        "1022"    | 1022.0d
+        "1000.01" | 1000.01d
     }
 
     def 'should throw Data exception if parser get wrong value #value'() {

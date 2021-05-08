@@ -10,7 +10,7 @@ import static configuration.Configuration.MAX_BASKET_SIZE;
 
 public class Basket {
 
-    private List<Product> products;
+    private final List<Product> products;
 
     public Basket() {
         products = new ArrayList<>();
