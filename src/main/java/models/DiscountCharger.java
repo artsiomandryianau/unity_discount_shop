@@ -29,7 +29,7 @@ public class DiscountCharger {
                 product.setDiscount(totalDiscount - getCurrentDiscount());
                 continue;
             }
-            int currentDiscount = (int) ((product.getInitialPrice() * totalDiscount) / totalBasketPrice);
+            int currentDiscount = (product.getInitialPrice() * totalDiscount) / totalBasketPrice;
             product.setDiscount(currentDiscount);
         }
     }

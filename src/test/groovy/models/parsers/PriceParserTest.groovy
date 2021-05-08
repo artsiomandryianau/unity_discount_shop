@@ -35,6 +35,6 @@ class PriceParserTest extends Specification {
         thrown(DataException)
 
         where:
-        price << ["1230.2131", "dsf", "", "sdf1.123"]
+        price << ["1230.2131", "dsf", "", "sdf1.123", "-1100"]
     }
 }
