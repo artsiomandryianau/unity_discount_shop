@@ -20,6 +20,7 @@ Example test cases (total discount 500):
 Technologies
 ------------
 - Java 15
+- Groovy
 - Spock
 
 How to run
