@@ -1,0 +1,24 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+
+    testCompile(
+            'junit:junit:4.12',
+            'org.codehaus.groovy:groovy-all:2.4.11',
+            'org.spockframework:spock-core:1.1-groovąy-2.4'
+    )
+}
