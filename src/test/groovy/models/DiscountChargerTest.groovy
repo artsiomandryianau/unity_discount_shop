@@ -8,7 +8,7 @@ import static UtilTest.createValidBasket
 class DiscountChargerTest extends Specification {
 
     @Unroll
-    def 'discount charging for laptop (price = #laptopPrice) equals to #laptopDisc'() {
+    def 'discount charging for #laptopPrice, #headphonesPrice,#keyboardPrice, #mousePrice equal to #laptopDisc, #headphoinesDisc, #keyboardDisc, #mouseDisc'() {
 
         given:
         Basket basket = createValidBasket(laptopPrice, headphonesPrice, keyboardPrice, mousePrice)
