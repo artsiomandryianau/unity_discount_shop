@@ -3,19 +3,28 @@ package models;
 public class Product {
 
     private String name;
-    private double price;
+    private double initialPrice;
+    private double discount;
 
-    public Product(String name, double price) {
+    public Product(String name, double initialPrice) {
         this.name = name;
-        this.price = price;
+        this.initialPrice = initialPrice;
+        discount = 0d;
     }
 
     @Override
     public String toString() {
-        return "models.Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return name + '\'' +
+                ", initialPrice: " + initialPrice +
+                ", discount: " + discount;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 
     public String getName() {
@@ -26,11 +35,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public double getInitialPrice() {
+        return initialPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setInitialPrice(double initialPrice) {
+        this.initialPrice = initialPrice;
     }
 }

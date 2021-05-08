@@ -16,12 +16,29 @@ public class Basket {
         products = new ArrayList<>();
     }
 
-    public void addProduct(Product product) throws DataException {
-        if (products.size() < MAX_BASKET_SIZE) {
-            products.add(product);
-        }
-        throw new DataException(String.format("Couldn't add new product. Basket max size is %s.", MAX_BASKET_SIZE));
+    public double getTotalPrice() {
+        return products.stream()
+                .mapToDouble(Product::getInitialPrice)
+                .sum();
     }
 
+    public void addProduct(Product product) throws DataException {
+        if (product == null) {
+            throw new DataException("Product shouldn't be equal to zero");
+        }
+        if (products.size() < MAX_BASKET_SIZE) {
+            products.add(product);
+        } else {
+            throw new DataException(String.format("Couldn't add new product. Basket max size is %s.", MAX_BASKET_SIZE));
+        }
+    }
+
+    public int size() {
+        return products.size();
+    }
+
+    public List<Product> getProductList() {
+        return products;
+    }
 
 }

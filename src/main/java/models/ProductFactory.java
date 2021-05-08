@@ -3,10 +3,8 @@ package models;
 import com.google.common.base.Strings;
 import exceptions.DataException;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import static models.parsers.PriceParser.parsePrice;
 
-import static configuration.Configuration.DECIMAL_PLACES;
 
 public class ProductFactory {
 
@@ -18,21 +16,12 @@ public class ProductFactory {
             throw new DataException("Price of product shouldn't be null or empty");
         }
 
-        Double priceOfProduct = parseOrNull(price);
+        double priceOfProduct = parsePrice(price);
 
-        if (priceOfProduct != null) {
+        if (!(priceOfProduct == 0)) {
             return new Product(name, priceOfProduct);
         }
-        return null;
+        throw new DataException("Price of product couldn't be equal to zero");
     }
 
-    private static Double parseOrNull(String price) throws DataException {
-        Double priceDouble = null;
-        try {
-            priceDouble = new BigDecimal(price).setScale(DECIMAL_PLACES, RoundingMode.HALF_UP).doubleValue();
-        } catch (NumberFormatException e) {
-            throw new DataException("Price value is not valid");
-        }
-        return priceDouble;
-    }
 }

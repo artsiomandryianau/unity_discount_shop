@@ -12,13 +12,22 @@ repositories {
 
 dependencies {
 
+    compile(
+            'org.slf4j:slf4j-api:1.7.25',
+            'org.slf4j:slf4j-log4j12:1.7.25',
+            'log4j:log4j:1.2.17'
+    )
 
-    compile 'org.codehaus.groovy:groovy-all:2.3.11'
     implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
     testCompile(
             'junit:junit:4.12',
             'org.codehaus.groovy:groovy-all:2.4.11',
-            'org.spockframework:spock-core:1.1-groovąy-2.4'
+            'org.spockframework:spock-core:1.1-groovy-2.4'
     )
+}
+
+test {
+
 }
