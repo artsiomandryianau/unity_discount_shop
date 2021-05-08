@@ -16,7 +16,7 @@ public class ProductFactory {
             throw new DataException("Price of product shouldn't be null or empty");
         }
 
-        double priceOfProduct = parsePrice(price);
+        int priceOfProduct = parsePrice(price);
 
         if (!(priceOfProduct == 0)) {
             return new Product(name, priceOfProduct);

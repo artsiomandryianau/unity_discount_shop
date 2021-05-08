@@ -3,13 +3,13 @@ package models;
 public class Product {
 
     private String name;
-    private double initialPrice;
-    private double discount;
+    private int initialPrice;
+    private int discount;
 
-    public Product(String name, double initialPrice) {
+    public Product(String name, int initialPrice) {
         this.name = name;
         this.initialPrice = initialPrice;
-        discount = 0d;
+        discount = 0;
     }
 
     @Override
@@ -19,11 +19,11 @@ public class Product {
                 ", discount: " + discount;
     }
 
-    public double getDiscount() {
+    public int getDiscount() {
         return discount;
     }
 
-    public void setDiscount(double discount) {
+    public void setDiscount(int discount) {
         this.discount = discount;
     }
 
@@ -35,11 +35,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getInitialPrice() {
+    public int getInitialPrice() {
         return initialPrice;
     }
 
-    public void setInitialPrice(double initialPrice) {
+    public void setInitialPrice(int initialPrice) {
         this.initialPrice = initialPrice;
     }
 }

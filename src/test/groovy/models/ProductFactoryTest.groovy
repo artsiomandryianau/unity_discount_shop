@@ -21,10 +21,9 @@ class ProductFactoryTest extends Specification {
         priceOfProduct == expectedPrice
 
         where:
-        name   | price     | expectedPrice
-        "Prod" | "1011.08" | 1011.08d
-        "Prod" | "1022"    | 1022.0d
-        "Prod" | "1000.01" | 1000.01d
+        name   | price  | expectedPrice
+        "Prod" | "1011" | 1011
+        "Prod" | "1022" | 1022
     }
 
     @Unroll

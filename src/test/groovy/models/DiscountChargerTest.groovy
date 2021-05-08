@@ -15,8 +15,8 @@ class DiscountChargerTest extends Specification {
         DiscountCharger discountCharger = new DiscountCharger(basket)
 
         when:
-        def totalDiscount = "500.00"
-        def totalDiscountDouble = 500.00d
+        def totalDiscount = "500"
+        def totalDiscountDouble = 500
         discountCharger.chargeDiscounts(totalDiscount)
 
         then:
@@ -28,11 +28,11 @@ class DiscountChargerTest extends Specification {
 
         where:
         laptopPrice | headphonesPrice | keyboardPrice | mousePrice | laptopDisc | headphoinesDisc | keyboardDisc | mouseDisc
-        "3500.00"   | "500.00"        | "500.00"      | "500.00"   | 350.00     | 50.00           | 50.00        | 50.00
-        "3500.00"   | "500.00"        | "500.00"      | "499.99"   | 350.00     | 50.00           | 50.00        | 50.00
-        "3500.00"   | "500.00"        | "500.00"      | "499.96"   | 350.00     | 50.00           | 50.00        | 50.00
-        "1500.00"   | "500.00"        | "200.00"      | "300.00"   | 300.00     | 100.00          | 40.00        | 60.00
-        "1000.00"   | "100.00"        | "200.00"      | "200.00"   | 333.33     | 33.33           | 66.66        | 66.68
+        "3500"      | "500"           | "500"         | "500"      | 350        | 50              | 50           | 50
+        "3500"      | "500"           | "500"         | "499"      | 350        | 50              | 50           | 50
+        "5000"      | "10000"         | "500"         | "200"      | 159        | 318             | 15           | 8
+        "1500"      | "500"           | "200"         | "300"      | 300        | 100             | 40           | 60
+        "1000"      | "100"           | "200"         | "200"      | 333        | 33              | 66           | 68
     }
 
 }

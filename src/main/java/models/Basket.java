@@ -16,9 +16,9 @@ public class Basket {
         products = new ArrayList<>();
     }
 
-    public double getTotalPrice() {
+    public int getTotalPrice() {
         return products.stream()
-                .mapToDouble(Product::getInitialPrice)
+                .mapToInt(Product::getInitialPrice)
                 .sum();
     }
 
