@@ -27,3 +27,8 @@ How to run
 ----------
 * Clone project
 * Run "gradle clean test"
+
+TASK
+-------
+<p align="center">
+  <a href ="##"><img alt="spring_vue" src="https://github.com/artsiomandryianau/unity_discount_shop/blob/master/files/image.png"></a></p>
